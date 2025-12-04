@@ -2,7 +2,7 @@
 
 A full-stack educational cybersecurity project built with Flask that simulates real-world password **attacks** and **defenses**.
 
-## 🧠 About
+# 🧠 About
 
 This web app demonstrates how common password security techniques can be implemented, attacked, and defended against using:
 
