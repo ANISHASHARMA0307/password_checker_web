@@ -3,14 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Security Toolkit</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
+
 <body>
-    <h1>🔐 Password Security Web App</h1>
-    <p>Choose your mode:</p>
-    <ul>
-        <li><a href="/defense">🛡️ Defense (Hash + Strength Check)</a></li>
-        <li><a href="/attack">💣 Attack (Cracking Simulation)</a></li>
-    </ul>
+
+<div class="container">
+    <h1>🔐 Password Security Toolkit</h1>
+    <p class="subtitle">Simulating real-world password attacks & defenses</p>
+
+    <div class="cards">
+        <a href="/defense" class="card defense">
+            🛡️
+            <h2>Defense Mode</h2>
+            <p>Hashing & Password Strength Analysis</p>
+        </a>
+
+        <a href="/attack" class="card attack">
+            💣
+            <h2>Attack Mode</h2>
+            <p>Password Cracking Simulation</p>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Password Security Toolkit</p>
+</footer>
+
 </body>
 </html>
+
