@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f2027, #000);
+    color: #00ff9c;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 420px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #00ff9c;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff9c55;
+    text-align: center;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px #00ff9c;
+}
+
+.subtitle {
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #8affd4;
+}
+
+.attack-form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background: #000;
+    color: #00ff9c;
+    border: 1px solid #00ff9c;
+    border-radius: 4px;
+}
+
+input::file-selector-button {
+    background: #000;
+    color: #00ff9c;
+    border: 1px solid #00ff9c;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    background: #00ff9c;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00cc7a;
+    box-shadow: 0 0 10px #00ff9c;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #ff004c;
+    color: #ff4f81;
+    text-align: center;
+    box-shadow: 0 0 10px #ff004c66;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #00ff9c;
+    font-size: 13px;
+}
+
+.back-link:hover {
+    text-shadow: 0 0 5px #00ff9c;
+}
