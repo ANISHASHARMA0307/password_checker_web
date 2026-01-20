@@ -1,47 +1,56 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defense Mode - Hash Cracking Tool</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Defense Mode | Password Security</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='defense.css') }}">
 </head>
+
 <body>
-    <header>
-        <h1>🛡️ Password Hashing & Strength Checker</h1>
-    </header>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/attack">Attack</a>
-        <a href="/defense">Defense</a>
-    </nav>
+<header class="header">
+    <h1>🛡 Password Hashing & Strength Checker</h1>
+    <p class="tagline">Defensive security for modern authentication</p>
+</header>
 
-    <div class="container">
-        <form method="POST">
-            <label for="password">Enter Password:</label>
-            <input type="text" id="password" name="password" required><br><br>
+<nav class="nav">
+    <a href="/">Home</a>
+    <a href="/attack">Attack</a>
+    <a href="/defense" class="active">Defense</a>
+</nav>
 
-            <label for="method">Choose Hash Method:</label>
-            <select name="method" id="method" required>
-                <option value="sha256">SHA-256</option>
-                <option value="bcrypt">bcrypt</option>
-            </select><br><br>
+<div class="container">
+    <form method="POST" class="defense-form">
 
-            <button type="submit">Hash Password</button>
-        </form>
+        <label>Enter Password</label>
+        <input type="text" name="password" placeholder="Enter password" required>
 
-        {% if strength %}
-            <div class="results">
-                <p>🔋 Strength: <strong>{{ strength }}</strong></p>
-                <p>🔑 Hashed Password: <code>{{ hashed }}</code></p>
-            </div>
-        {% endif %}
+        <label>Choose Hash Method</label>
+        <select name="method" required>
+            <option value="sha256">SHA-256</option>
+            <option value="bcrypt">bcrypt</option>
+        </select>
+
+        <button type="submit">🔐 Hash Password</button>
+    </form>
+
+    {% if strength %}
+    <div class="results">
+        <p>🔋 Password Strength: <strong>{{ strength }}</strong></p>
+        <p>🔑 Hashed Output:</p>
+        <code>{{ hashed }}</code>
     </div>
+    {% endif %}
+</div>
 
-    <footer>
-        <p><a href="/">⬅️ Back to Home</a></p>
-        &copy; 2025 Hash Cracking Tool. All rights reserved.
-    </footer>
+<footer class="footer">
+    <a href="/">⬅ Back to Home</a>
+    <p>© 2025 Password Security Toolkit</p>
+</footer>
+
 </body>
 </html>
+
