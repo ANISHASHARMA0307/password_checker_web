@@ -2,31 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Attack Mode</title>
+    <title>Attack Mode | Password Cracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='attack.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>💣 Password Cracker</h2>
 
-    <form method="POST" enctype="multipart/form-data">
-        <label>Enter Target Hash:</label>
-        <input type="text" name="target_hash" required><br><br>
+<div class="container">
+    <h1>💣 Password Cracker</h1>
+    <p class="subtitle">Simulating real-world password cracking attacks</p>
 
-        <label>Upload Wordlist (.txt):</label>
-        <input type="file" name="wordlist" required><br><br>
+    <form method="POST" enctype="multipart/form-data" class="attack-form">
+        <label>Target Hash</label>
+        <input type="text" name="target_hash" placeholder="Enter hashed password" required>
 
-        <label>Choose Cracking Method:</label>
+        <label>Upload Wordlist (.txt)</label>
+        <input type="file" name="wordlist" required>
+
+        <label>Cracking Method</label>
         <select name="method">
-            <option value="hybrid">Hybrid</option>
+            <option value="hybrid">Hybrid Attack</option>
             <option value="rainbow">Rainbow Table</option>
-        </select><br><br>
+        </select>
 
-        <button type="submit">Start Cracking</button>
+        <button type="submit">🚀 Start Cracking</button>
     </form>
 
     {% if result %}
-        <p>🔍 Result: <strong>{{ result }}</strong></p>
+        <div class="result-box">
+            <p>🔍 Result:</p>
+            <strong>{{ result }}</strong>
+        </div>
     {% endif %}
 
-    <p><a href="/">⬅️ Back to Home</a></p>
+    <a href="/" class="back-link">⬅ Back to Home</a>
+</div>
+
 </body>
 </html>
+
